@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+    
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+ }
+ 
+ body {
+    background-color: rgb(175, 174, 174);
+ }
+
+.gridForm {
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 3fr 4fr 3fr;
+    grid-template-rows: 2fr 6fr 2fr;
+}
+
+.header {
+    grid-column: 2 / 3;
+    grid-row: 1/ 2;
+}
+
+.header p {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 3rem;
+    color: #0c0aa1;
+}
+
+.calciBody {
+    grid-column: 2 / 3;
+    grid-row: 2/ 3;
+    background-color: #fff;
+    box-shadow: 0 0 0.7rem rgba(0, 0, 0, 0.3);
+    /* border-color: aqua solid 2rem; */
+}
+
+.calci {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 2fr repeat(5, 1fr);
+    position: relative;
+    grid-gap: 1px;
+    background-color: black;
+    
+}
+
+.calci div {
+    color: #fff;
+    background-color: rgb(81, 92, 95);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clear {
+    grid-column: 1 / 4;
+    grid-row: 6 / 7;
+}
+
+.calci div:not(.result) {
+    cursor: pointer;
+}
+
+div.result {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.result p {
+    font-size: 2rem;
+    padding: 1rem;
+}
