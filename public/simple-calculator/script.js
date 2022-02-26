@@ -5,7 +5,7 @@ function setValue(value) {
         $("#display").text(value);
         oldText = "" + value;
     }
-    else if (oldText.length < 20) {
+    else if (oldText.length < 10) {
         // return oldText + value;
         $("#display").text(oldText + value);
         oldText = oldText + value;
