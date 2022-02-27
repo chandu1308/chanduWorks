@@ -109,9 +109,11 @@ $(".backSpace").click(function(){
 $(".equalTo").click(function () {
     try {
         let answer = eval(oldText);
-        // console.log(answer);
+        console.log(answer);
         $("#display").empty();
         $("#display").text(answer);
+        oldText = "" + answer;
+        
     } catch (e) {
         // console.error(e);
         console.error("NEEKU MATHS VACCHA");
