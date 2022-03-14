@@ -14,11 +14,33 @@ function setValue(value) {
 };
 
 function operandFloat(value) {
-    if ($("#display").text().slice(-1) !== value) {
+    const currentChar = $("#display").text().slice(-1);
+    if (
+        currentChar == '+' ||
+        currentChar == '-' ||
+        currentChar == '*' ||
+        currentChar == '/'
+    ) {
+        return oldText;
+    }
+    else{
         setValue(value);
     }
 }
 
+function calculate() {
+    try {
+        let answer = eval(oldText);
+        console.log(answer);
+        $("#display").empty();
+        $("#display").text(answer);
+        oldText = "" + answer;
+        
+    } catch (e) {
+        // console.error(e);
+        console.error("NEEKU MATHS VACCHA");
+    }
+}
 
 $(".seven").click(function () {
     setValue(7);
@@ -75,19 +97,29 @@ $(".clear").click(function () {
 
 });
 
+
 $(".plus").click(function () {
+    calculate();
     operandFloat("+");
+    // if ($("#display").text().slice(-1) === "+, -, *, /") {
+    //         return oldText;
+
+    // }
+
 });
 
 $(".minus").click(function () {
+    calculate();
     operandFloat("-");
 });
 
 $(".multiply").click(function () {
+    calculate();
     operandFloat("*");
 });
 
 $(".devide").click(function () {
+    calculate();
     operandFloat("/");
 });
 
@@ -106,16 +138,5 @@ $(".backSpace").click(function(){
 });
 
 
-$(".equalTo").click(function () {
-    try {
-        let answer = eval(oldText);
-        console.log(answer);
-        $("#display").empty();
-        $("#display").text(answer);
-        oldText = "" + answer;
-        
-    } catch (e) {
-        // console.error(e);
-        console.error("NEEKU MATHS VACCHA");
-    }
-})
+$(".equalTo").click(calculate);
+
