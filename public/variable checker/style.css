@@ -1,0 +1,30 @@
+body {
+  background-color: darkgrey;
+}
+
+.header {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 34vh;
+}
+
+input {
+  font-size: 2rem;
+}
+
+button {
+  font-size: 1.5rem;
+  background-color: aqua;
+  margin-top: 1rem;
+}
+
+#result {
+  font-size: 1.5rem;
+  left: 27rem;
+}
