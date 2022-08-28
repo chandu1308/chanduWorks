@@ -21,7 +21,7 @@ if(x != null){
 }
 
 
-$(".button").click(function(){
+$("#button").click(function(){
     const namesString = localStorage.getItem("names");
     const names = namesString != null ? JSON.parse(namesString) : [];
     names.push(textVal.value);
@@ -29,6 +29,13 @@ $(".button").click(function(){
     $("ol").append(`<li>${textVal.value}</li>`);
 
     $("#test").val("").focus();
+});
+
+$(".removeData").click(function(){
+    // var removeData = document.querySelector(".removeData");
+    localStorage.removeItem("names");
+    location.reload();
+
 });
 
 

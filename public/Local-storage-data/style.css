@@ -11,7 +11,7 @@ body{
 }
 
 .heading {
-    color: #fff;
+    color: #937de1;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: xx-large;
     text-align: center;
@@ -63,5 +63,5 @@ input {
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: bold;
     color: #f0083b;
-    overflow: scroll;
+    overflow: auto;
 }
